@@ -156,7 +156,7 @@ const server = http.createServer(function(request, response) {
   //Удаление
   if (request.method === "DELETE" && regex(request.url)) {
     let id = regex(request.url);
-    let file = path.join(datadir, id) + ".txt";
+    let file = path.join(datadir, id) + ".json";
     
     // Проверяем, существует ли файл, и если да, то удаляем его
     if (fs.existsSync(file)) {
